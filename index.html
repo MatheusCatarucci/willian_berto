@@ -163,33 +163,16 @@
     <!-- HERO -->
     <main>
 
-        <section id="inicio" class="hero-grid relative overflow-hidden bg-[#002552] pt-32 pb-20 lg:pt-40 lg:pb-28">
+        <section id="inicio" class="relative overflow-hidden bg-[#002552] pt-32 pb-20 lg:pt-40 lg:pb-28">
 
-            <!-- Decorative gears -->
-            <div class="pointer-events-none absolute -right-24 top-24 hidden opacity-10 lg:block">
-
-                <svg class="gear h-80 w-80 text-white" viewBox="0 0 100 100" fill="currentColor">
-
-                    <path
-                        d="M60 4h-20l-3 10-8 3-9-6-14 14 6 9-3 8-10 3v20l10 3 3 8-6 9 14 14 9-6 8 3 3 10h20l3-10 8-3 9 6 14-14-6-9 3-8 10-3V45l-10-3-3-8 6-9L73 11l-9 6-8-3-3-10Zm-10 25a21 21 0 1 1 0 42 21 21 0 0 1 0-42Z" />
-
-                </svg>
-
+            <!-- Fundo do guindaste com efeito parallax -->
+            <div class="pointer-events-none absolute inset-0 overflow-hidden">
+                <img id="parallaxCrane" src="./assets/fundo-hero.jpeg" alt=""
+                    class="absolute left-0 top-0 h-[115%] w-full object-cover object-center will-change-transform">
+                <div class="absolute inset-0 bg-[#002552]/35"></div>
             </div>
 
-            <div class="pointer-events-none absolute -bottom-24 -left-20 hidden opacity-5 lg:block">
-
-                <svg class="gear-reverse h-72 w-72 text-white" viewBox="0 0 100 100" fill="currentColor">
-
-                    <path
-                        d="M60 4h-20l-3 10-8 3-9-6-14 14 6 9-3 8-10 3v20l10 3 3 8-6 9 14 14 9-6 8 3 3 10h20l3-10 8-3 9 6 14-14-6-9 3-8 10-3V45l-10-3-3-8 6-9L73 11l-9 6-8-3-3-10Zm-10 25a21 21 0 1 1 0 42 21 21 0 0 1 0-42Z" />
-
-                </svg>
-
-            </div>
-
-
-            <div class="relative mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2 lg:px-8">
+            <div class="relative z-10 mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2 lg:px-8">
 
                 <div class="reveal">
 
@@ -1317,6 +1300,21 @@
             revealObserver.observe(element);
         });
 
+
+        // Parallax do guindaste na Hero
+        const parallaxCrane = document.getElementById("parallaxCrane");
+
+        window.addEventListener("scroll", () => {
+            const hero = document.getElementById("inicio");
+            if (!hero || !parallaxCrane) return;
+
+            const scrollY = window.scrollY;
+            const heroHeight = hero.offsetHeight;
+
+            if (scrollY <= heroHeight) {
+                parallaxCrane.style.transform = `translate3d(0, ${scrollY * 0.28}px, 0)`;
+            }
+        }, { passive: true });
 
         // Navbar shadow on scroll
         const navbar = document.getElementById("navbar");
