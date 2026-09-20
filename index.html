@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Willian Berto Catarucci | Engenheiro Mecânico</title>
+    <meta name="description"
+        content="Willian Berto Catarucci — Engenheiro Mecânico, CREA-SP 5069161584. Responsabilidade técnica, ART, laudos, inspeções e acompanhamento de equipamentos." />
+
+    <!-- Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        html {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-grid {
+            background-image:
+                linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
+            background-size: 42px 42px;
+        }
+
+        .gear {
+            animation: rotateGear 24s linear infinite;
+        }
+
+        .gear-reverse {
+            animation: rotateGearReverse 28s linear infinite;
+        }
+
+        @keyframes rotateGear {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotateGearReverse {
+            from {
+                transform: rotate(360deg);
+            }
+
+            to {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <!-- NAVBAR -->
+    <header id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#002552]/95 backdrop-blur-md">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+
+            <a href="#inicio" class="group">
+                <div class="text-sm font-800 tracking-[0.12em] text-white">
+                    WILLIAN BERTO
+                </div>
+                <div class="text-[10px] font-600 tracking-[0.22em] text-blue-200">
+                    ENGENHEIRO MECÂNICO
+                </div>
+            </a>
+
+            <!-- Desktop -->
+            <nav class="hidden items-center gap-8 md:flex">
+                <a href="#inicio" class="text-sm font-600 text-white transition hover:text-blue-200">
+                    Início
+                </a>
+
+                <a href="#sobre" class="text-sm font-600 text-white transition hover:text-blue-200">
+                    Sobre
+                </a>
+
+                <a href="#servicos" class="text-sm font-600 text-white transition hover:text-blue-200">
+                    Serviços
+                </a>
+
+                <a href="#empresas" class="text-sm font-600 text-white transition hover:text-blue-200">
+                    Empresas atendidas
+                </a>
+
+                <a href="#contato"
+                    class="rounded-lg bg-white px-4 py-2.5 text-sm font-700 text-[#002552] transition hover:-translate-y-0.5 hover:bg-blue-50">
+                    Contato
+                </a>
+            </nav>
+
+            <!-- Mobile Button -->
+            <button id="menuButton" type="button" aria-label="Abrir menu" aria-expanded="false"
+                class="rounded-lg p-2 text-white transition hover:bg-white/10 md:hidden">
+                <svg id="menuIcon" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden border-t border-white/10 bg-[#002552] md:hidden">
+            <nav class="mx-auto flex max-w-7xl flex-col px-5 py-4">
+                <a href="#inicio" class="border-b border-white/10 py-4 text-sm font-600 text-white">
+                    Início
+                </a>
+                <a href="#sobre" class="border-b border-white/10 py-4 text-sm font-600 text-white">
+                    Sobre
+                </a>
+                <a href="#servicos" class="border-b border-white/10 py-4 text-sm font-600 text-white">
+                    Serviços
+                </a>
+                <a href="#empresas" class="border-b border-white/10 py-4 text-sm font-600 text-white">
+                    Empresas atendidas
+                </a>
+                <a href="#contato" class="py-4 text-sm font-700 text-white">
+                    Contato
+                </a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section id="inicio" class="hero-grid relative overflow-hidden bg-[#002552] pt-32 pb-20 lg:pt-40 lg:pb-28">
+
+            <!-- Decorative gears -->
+            <div class="pointer-events-none absolute -right-24 top-24 hidden opacity-10 lg:block">
+                <svg class="gear h-80 w-80 text-white" viewBox="0 0 100 100" fill="currentColor">
+                    <path
+                        d="M60 4h-20l-3 10-8 3-9-6-14 14 6 9-3 8-10 3v20l10 3 3 8-6 9 14 14 9-6 8 3 3 10h20l3-10 8-3 9 6 14-14-6-9 3-8 10-3V45l-10-3-3-8 6-9L73 11l-9 6-8-3-3-10Zm-10 25a21 21 0 1 1 0 42 21 21 0 0 1 0-42Z" />
+                </svg>
+            </div>
+
+            <div class="pointer-events-none absolute -bottom-24 -left-20 hidden opacity-5 lg:block">
+                <svg class="gear-reverse h-72 w-72 text-white" viewBox="0 0 100 100" fill="currentColor">
+                    <path
+                        d="M60 4h-20l-3 10-8 3-9-6-14 14 6 9-3 8-10 3v20l10 3 3 8-6 9 14 14 9-6 8 3 3 10h20l3-10 8-3 9 6 14-14-6-9 3-8 10-3V45l-10-3-3-8 6-9L73 11l-9 6-8-3-3-10Zm-10 25a21 21 0 1 1 0 42 21 21 0 0 1 0-42Z" />
+                </svg>
+            </div>
+
+            <div class="relative mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2 lg:px-8">
+
+                <div class="reveal">
+
+                    <div
+                        class="mb-6 inline-flex items-center gap-3 rounded-full border border-blue-300/20 bg-white/5 px-4 py-2">
+                        <span class="h-2 w-2 rounded-full bg-blue-300"></span>
+                        <span class="text-xs font-700 uppercase tracking-[0.16em] text-blue-100">
+                            Engenharia Mecânica
+                        </span>
+                    </div>
+
+                    <p class="mb-3 text-sm font-700 tracking-[0.22em] text-blue-200">
+                        RESPONSABILIDADE TÉCNICA
+                    </p>
+
+                    <h1 class="max-w-3xl text-4xl font-900 leading-tight text-white sm:text-5xl lg:text-6xl">
+                        ENGENHEIRO
+                        <span class="block text-blue-200">MECÂNICO</span>
+                    </h1>
+
+                    <h2 class="mt-6 text-xl font-800 uppercase tracking-wide text-white sm:text-2xl">
+                        Willian Berto Catarucci
+                    </h2>
+
+                    <div
+                        class="mt-4 inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/5 px-3 py-2">
+                        <svg class="h-4 w-4 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 3c-2.774 0-5.312.946-7.338 2.53M4.36 7.64A11.955 11.955 0 003 12c0 2.774.946 5.312 2.53 7.338M19.64 16.36A11.955 11.955 0 0021 12c0-2.774-.946-5.312-2.53-7.338" />
+                        </svg>
+                        <span class="text-xs font-600 text-blue-100">
+                            CREA-SP 5069161584
+                        </span>
+                    </div>
+
+                    <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-200 sm:text-xl">
+                        Seu parceiro em
+                        <strong class="text-white">segurança</strong>,
+                        <strong class="text-white">conformidade legal</strong>
+                        e
+                        <strong class="text-white">confiabilidade dos equipamentos.</strong>
+                    </p>
+
+                    <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+
+                        <a href="#contato"
+                            class="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-800 text-[#002552] shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-blue-50 focus:outline-none focus:ring-4 focus:ring-white/30">
+                            Entre em contato
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+
+                        <a href="#servicos"
+                            class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-800 text-white backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:bg-white/10 focus:outline-none focus:ring-4 focus:ring-white/20">
+                            Conheça os serviços
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hero image -->
+                <div class="reveal relative">
+
+                    <div class="absolute -inset-3 rounded-3xl bg-blue-400/10 blur-2xl"></div>
+
+                    <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl">
+
+                        <!-- FOTO -->
+                        <div class="relative aspect-[4/5] overflow-hidden">
+
+                            <img id="heroImage" src="./assets/willian.png"
+                                alt="Willian Berto Catarucci, Engenheiro Mecânico"
+                                class="absolute inset-0 h-full w-full object-cover object-top transition duration-700 hover:scale-105">
+
+                            <!-- Gradiente da parte inferior -->
+                            <div
+                                class="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
+                            </div>
+
+                            <!-- Informações -->
+                            <div class="absolute inset-x-0 bottom-0 z-10 p-6 sm:p-7">
+                                <div class="flex items-end justify-between gap-4">
+
+                                    <div>
+                                        <p class="text-xs font-600 uppercase tracking-wider text-blue-200">
+                                            Atendimento empresarial
+                                        </p>
+
+                                        <p class="mt-1 text-xl font-800 text-white">
+                                            Jundiaí e região
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SOBRE -->
+        <section id="sobre" class="bg-white py-20 lg:py-28">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+
+                <div class="grid items-center gap-14 lg:grid-cols-[.9fr_1.1fr]">
+
+                    <div class="reveal relative">
+
+                        <div class="absolute -left-4 -top-4 h-24 w-24 rounded-2xl border border-[#002552]/10"></div>
+
+                        <div class="relative overflow-hidden rounded-3xl bg-slate-100">
+                            <img src="./assets/willian.png" alt="Willian Berto Catarucci"
+                                class="h-[520px] w-full object-cover object-top"
+                                onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'flex h-[520px] items-end bg-gradient-to-br from-slate-800 to-[#002552] p-8\'><div><div class=\'text-sm font-700 uppercase tracking-widest text-blue-200\'>Willian Berto Catarucci</div><div class=\'mt-2 text-3xl font-900 text-white\'>Engenheiro Mecânico</div></div></div>';" />
+                        </div>
+
+                        <div class="absolute -bottom-6 -right-5 rounded-2xl bg-[#002552] px-6 py-5 shadow-xl">
+                            <p class="text-xs font-700 uppercase tracking-widest text-blue-200">
+                                Registro profissional
+                            </p>
+                            <p class="mt-1 text-lg font-800 text-white">
+                                CREA-SP 5069161584
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="reveal">
+
+                        <span class="text-xs font-800 uppercase tracking-[0.2em] text-[#002552]">
+                            Sobre o profissional
+                        </span>
+
+                        <h2 class="mt-3 text-3xl font-900 tracking-tight text-slate-900 sm:text-4xl">
+                            Experiência técnica aplicada à segurança e projetos
+                        </h2>
+
+                        <p class="mt-6 text-base leading-8 text-slate-600">
+                            <strong class="text-slate-900">
+                                Willian Berto Catarucci
+                            </strong>
+                            é Engenheiro Mecânico registrado no CREA-SP, atuando com homologação veicular, emissões, etc.
+                        </p>
+
+                        <p class="mt-5 text-base leading-8 text-slate-600">
+                            Mais de
+                            <strong class="text-slate-900">15 anos de experiência</strong>
+                            na área da engenharia mecânica e automotiva, atuando com inspeções, homologação,
+                            gestão de projetos, manutenção e responsabilidade técnica.
+                        </p>
+
+                        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+
+                            <div
+                                class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-1 hover:shadow-lg">
+                                <div class="flex items-center gap-3">
+                                    <div class="rounded-xl bg-[#002552]/10 p-3">
+                                        <svg class="h-6 w-6 text-[#002552]" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 3c-2.774 0-5.312.946-7.338 2.53M4.36 7.64A11.955 11.955 0 003 12c0 2.774.946 5.312 2.53 7.338M19.64 16.36A11.955 11.955 0 0021 12c0-2.774-.946-5.312-2.53-7.338" />
+                                        </svg>
+                                    </div>
+
+                                    <div>
+                                        <p class="text-sm font-800 text-slate-900">
+                                            CREA-SP
+                                        </p>
+                                        <p class="text-xs font-600 text-slate-500">
+                                            Registro profissional
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-1 hover:shadow-lg">
+                                <div class="flex items-center gap-3">
+                                    <div class="rounded-xl bg-[#002552]/10 p-3">
+                                        <svg class="h-6 w-6 text-[#002552]" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                d="M12 8v4l3 2m7-2a10 10 0 11-20 0 10 10 0 0120 0Z" />
+                                        </svg>
+                                    </div>
+
+                                    <div>
+                                        <p class="text-sm font-800 text-slate-900">
+                                            +15 anos
+                                        </p>
+                                        <p class="text-xs font-600 text-slate-500">
+                                            De experiência
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SERVIÇOS -->
+        <section id="servicos" class="bg-slate-50 py-20 lg:py-28">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+
+                <div class="reveal mx-auto max-w-3xl text-center">
+                    <span class="text-xs font-800 uppercase tracking-[0.2em] text-[#002552]">
+                        Soluções técnicas
+                    </span>
+
+                    <h2 class="mt-3 text-3xl font-900 tracking-tight text-slate-900 sm:text-4xl">
+                        Serviços Oferecidos
+                    </h2>
+
+                    <p class="mt-5 text-base leading-7 text-slate-600">
+                        Serviços técnicos para empresas que precisam de segurança,
+                        documentação, conformidade e acompanhamento profissional.
+                    </p>
+                </div>
+
+
+                <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+                    <!-- Serviço -->
+                    <article
+                        class="reveal group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-[#002552]/20 hover:shadow-xl">
+                        <div
+                            class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#002552]/10 text-[#002552] transition group-hover:bg-[#002552] group-hover:text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M9 6h6M9 10h6M9 14h4m-7 6h10a2 2 0 002-2V6a2 2 0 00-2-2H7a2 2 0 00-2 2v12a2 2 0 002 2Z" />
+                            </svg>
+                        </div>
+
+                        <h3 class="mt-5 text-lg font-800 text-slate-900">
+                            Responsável Técnico (RT)
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Responsabilidade técnica para empresas de diversos segmentos.
+                        </p>
+                    </article>
+
+
+                    <article
+                        class="reveal group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-[#002552]/20 hover:shadow-xl">
+                        <div
+                            class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#002552]/10 text-[#002552] transition group-hover:bg-[#002552] group-hover:text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M9 12h6m-3-3v6m7-9v10a2 2 0 01-2 2H7a2 2 0 01-2-2V6a2 2 0 012-2h5l7 4Z" />
+                            </svg>
+                        </div>
+
+                        <h3 class="mt-5 text-lg font-800 text-slate-900">
+                            Emissão de ART
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Anotação de Responsabilidade Técnica conforme exigências do CREA.
+                        </p>
+                    </article>
+
+
+                    <article
+                        class="reveal group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-[#002552]/20 hover:shadow-xl">
+                        <div
+                            class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#002552]/10 text-[#002552] transition group-hover:bg-[#002552] group-hover:text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M8 6h8M6 4h12a1 1 0 011 1v14a1 1 0 01-1 1H6a1 1 0 01-1-1V5a1 1 0 011-1Zm3 6h6m-6 4h6" />
+                            </svg>
+                        </div>
+
+                        <h3 class="mt-5 text-lg font-800 text-slate-900">
+                            Laudos Técnicos
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Laudos de inspeção, avaliação e condições de uso de equipamentos.
+                        </p>
+                    </article>
+
+
+                    <article
+                        class="reveal group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-[#002552]/20 hover:shadow-xl">
+                        <div
+                            class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#002552]/10 text-[#002552] transition group-hover:bg-[#002552] group-hover:text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M3 18h18M5 18V9l7-4 7 4v9M9 18v-5h6v5" />
+                            </svg>
+                        </div>
+
+                        <h3 class="mt-5 text-lg font-800 text-slate-900">
+                            Inspeção de Equipamentos
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Vistorias técnicas em guindastes, muncks, empilhadeiras,
+                            plataformas e outros.
+                        </p>
+                    </article>
+
+
+                    <article
+                        class="reveal group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-[#002552]/20 hover:shadow-xl">
+                        <div
+                            class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#002552]/10 text-[#002552] transition group-hover:bg-[#002552] group-hover:text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M7 4h10a2 2 0 012 2v12H5V6a2 2 0 012-2Zm0 4h10m-7 4h4m-4 3h4" />
+                            </svg>
+                        </div>
+
+                        <h3 class="mt-5 text-lg font-800 text-slate-900">
+                            Relatórios de Manutenção
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Elaboração de relatórios técnicos de manutenção preventiva e corretiva.
+                        </p>
+                    </article>
+
+
+                    <article
+                        class="reveal group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-[#002552]/20 hover:shadow-xl">
+                        <div
+                            class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#002552]/10 text-[#002552] transition group-hover:bg-[#002552] group-hover:text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M4 19h16M6 17l3-4 3 2 5-7" />
+                            </svg>
+                        </div>
+
+                        <h3 class="mt-5 text-lg font-800 text-slate-900">
+                            Avaliação das Condições de Operação
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Análise técnica das condições de operação e segurança dos equipamentos.
+                        </p>
+                    </article>
+
+
+                    <article
+                        class="reveal group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-[#002552]/20 hover:shadow-xl">
+                        <div
+                            class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#002552]/10 text-[#002552] transition group-hover:bg-[#002552] group-hover:text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M13 10V3L4 14h7v7l9-11h-7Z" />
+                            </svg>
+                        </div>
+
+                        <h3 class="mt-5 text-lg font-800 text-slate-900">
+                            Acompanhamento Técnico
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Acompanhamento de máquinas e equipamentos para garantir desempenho e segurança.
+                        </p>
+                    </article>
+
+
+                    <article
+                        class="reveal group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-[#002552]/20 hover:shadow-xl">
+                        <div
+                            class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#002552]/10 text-[#002552] transition group-hover:bg-[#002552] group-hover:text-white">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M12 3v18m9-9H3M5.5 5.5l13 13m0-13l-13 13" />
+                            </svg>
+                        </div>
+
+                        <h3 class="mt-5 text-lg font-800 text-slate-900">
+                            Orientação Técnica
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Orientação técnica conforme normas e legislação vigente.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- EMPRESAS -->
+        <section id="empresas" class="bg-white py-20 lg:py-28">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+
+                <div class="grid items-center gap-12 lg:grid-cols-[1fr_1fr]">
+
+                    <div class="reveal">
+
+                        <span class="text-xs font-800 uppercase tracking-[0.2em] text-[#002552]">
+                            Segmentos atendidos
+                        </span>
+
+                        <h2 class="mt-3 text-3xl font-900 text-slate-900 sm:text-4xl">
+                            Atendo Empresas de:
+                        </h2>
+
+                        <p class="mt-5 max-w-2xl text-base leading-7 text-slate-600">
+                            Atendimento técnico para empresas que trabalham com máquinas,
+                            equipamentos, transporte e operações industriais.
+                        </p>
+
+                        <div class="mt-8 grid gap-3 sm:grid-cols-2">
+
+                            <div class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                                <span
+                                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#002552] text-white">
+                                    ✓
+                                </span>
+                                <span class="text-sm font-700 text-slate-800">
+                                    Locação de guindastes
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                                <span
+                                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#002552] text-white">
+                                    ✓
+                                </span>
+                                <span class="text-sm font-700 text-slate-800">
+                                    Muncks
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                                <span
+                                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#002552] text-white">
+                                    ✓
+                                </span>
+                                <span class="text-sm font-700 text-slate-800">
+                                    Plataformas elevatórias
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                                <span
+                                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#002552] text-white">
+                                    ✓
+                                </span>
+                                <span class="text-sm font-700 text-slate-800">
+                                    Caminhões
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                                <span
+                                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#002552] text-white">
+                                    ✓
+                                </span>
+                                <span class="text-sm font-700 text-slate-800">
+                                    Empilhadeiras
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                                <span
+                                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#002552] text-white">
+                                    ✓
+                                </span>
+                                <span class="text-sm font-700 text-slate-800">
+                                    Equipamentos industriais
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                                <span
+                                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#002552] text-white">
+                                    ✓
+                                </span>
+                                <span class="text-sm font-700 text-slate-800">
+                                    Empresas de transporte
+                                </span>
+                            </div>
+
+                            <div class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                                <span
+                                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#002552] text-white">
+                                    ✓
+                                </span>
+                                <span class="text-sm font-700 text-slate-800">
+                                    Metalúrgicas
+                                </span>
+                            </div>
+
+                            <div
+                                class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4 sm:col-span-2">
+                                <span
+                                    class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#002552] text-white">
+                                    ✓
+                                </span>
+                                <span class="text-sm font-700 text-slate-800">
+                                    Indústrias
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="reveal grid grid-cols-2 gap-4">
+
+                        <div class="overflow-hidden rounded-3xl">
+                            <img src="https://images.unsplash.com/photo-1605733160314-4fc7dac4bb16?auto=format&fit=crop&w=800&q=85"
+                                alt="Equipamento industrial"
+                                class="h-64 w-full object-cover transition duration-700 hover:scale-105 sm:h-80">
+                        </div>
+
+                        <div class="mt-10 overflow-hidden rounded-3xl">
+                            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=85"
+                                alt="Caminhão e operação industrial"
+                                class="h-64 w-full object-cover transition duration-700 hover:scale-105 sm:h-80">
+                        </div>
+
+                        <div class="-mt-4 overflow-hidden rounded-3xl">
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=85"
+                                alt="Máquina industrial"
+                                class="h-64 w-full object-cover transition duration-700 hover:scale-105 sm:h-80">
+                        </div>
+
+                        <div class="mt-6 overflow-hidden rounded-3xl">
+                            <img src="https://images.unsplash.com/photo-1586864387789-628af9feed72?auto=format&fit=crop&w=800&q=85"
+                                alt="Empilhadeira"
+                                class="h-64 w-full object-cover transition duration-700 hover:scale-105 sm:h-80">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- POR QUE CONTRATAR -->
+        <section class="overflow-hidden bg-[#002552] py-20 lg:py-24">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+
+                <div class="grid items-center gap-12 lg:grid-cols-[.8fr_1.2fr]">
+
+                    <div class="reveal">
+                        <span class="text-xs font-800 uppercase tracking-[0.2em] text-blue-200">
+                            Segurança e confiança
+                        </span>
+
+                        <h2 class="mt-3 text-3xl font-900 text-white sm:text-4xl">
+                            Por que contratar?
+                        </h2>
+
+                        <p class="mt-5 max-w-xl text-base leading-8 text-blue-100">
+                            Atendimento técnico profissional para apoiar sua empresa na
+                            segurança, documentação e conformidade dos equipamentos.
+                        </p>
+                    </div>
+
+
+                    <div class="grid gap-4 sm:grid-cols-2">
+
+                        <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+                            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                        d="M12 8v4l3 2m7-2a10 10 0 11-20 0 10 10 0 0120 0Z" />
+                                </svg>
+                            </div>
+
+                            <h3 class="mt-5 text-base font-800 text-white">
+                                Atendimento rápido
+                            </h3>
+
+                            <p class="mt-2 text-sm leading-6 text-blue-100">
+                                Comunicação direta e atendimento focado nas necessidades da empresa.
+                            </p>
+                        </div>
+
+
+                        <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+                            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 3c-2.774 0-5.312.946-7.338 2.53M4.36 7.64A11.955 11.955 0 003 12c0 2.774.946 5.312 2.53 7.338M19.64 16.36A11.955 11.955 0 0021 12c0-2.774-.946-5.312-2.53-7.338" />
+                                </svg>
+                            </div>
+
+                            <h3 class="mt-5 text-base font-800 text-white">
+                                Engenheiro registrado no CREA
+                            </h3>
+
+                            <p class="mt-2 text-sm leading-6 text-blue-100">
+                                Atuação profissional com registro CREA-SP 5069161584.
+                            </p>
+                        </div>
+
+
+                        <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+                            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                        d="M9 12h6m-6 4h6m-9-9h10a2 2 0 012 2v10a2 2 0 01-2 2H7a2 2 0 01-2-2V9l3-3Z" />
+                                </svg>
+                            </div>
+
+                            <h3 class="mt-5 text-base font-800 text-white">
+                                Documentação técnica
+                            </h3>
+
+                            <p class="mt-2 text-sm leading-6 text-blue-100">
+                                Emissão e elaboração de documentação técnica necessária.
+                            </p>
+                        </div>
+
+
+                        <div class="reveal rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+                            <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-white">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                        d="M12 3l7 4v5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V7l7-4Z" />
+                                </svg>
+                            </div>
+
+                            <h3 class="mt-5 text-base font-800 text-white">
+                                Segurança jurídica
+                            </h3>
+
+                            <p class="mt-2 text-sm leading-6 text-blue-100">
+                                Suporte técnico para atendimento às necessidades documentais da empresa.
+                            </p>
+                        </div>
+
+
+                        <div
+                            class="reveal rounded-2xl border border-blue-200/20 bg-blue-300/10 p-6 backdrop-blur-sm sm:col-span-2">
+                            <div class="flex gap-4">
+                                <div
+                                    class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-white">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+
+                                <div>
+                                    <h3 class="text-base font-800 text-white">
+                                        Conformidade com as exigências legais
+                                    </h3>
+                                    <p class="mt-2 text-sm leading-6 text-blue-100">
+                                        Orientação técnica alinhada às normas e à legislação aplicável.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ÁREA DE ATENDIMENTO -->
+        <section class="bg-slate-50 py-20 lg:py-28">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+
+                <div class="reveal mx-auto max-w-3xl text-center">
+                    <span class="text-xs font-800 uppercase tracking-[0.2em] text-[#002552]">
+                        Área de atuação
+                    </span>
+
+                    <h2 class="mt-3 text-3xl font-900 text-slate-900 sm:text-4xl">
+                        Atendimento em toda a região de:
+                    </h2>
+
+                    <p class="mt-5 text-base leading-7 text-slate-600">
+                        Atendimento em toda a região de Jundiaí, Campinas, Sorocaba e Grande São Paulo.
+                    </p>
+                </div>
+
+
+                <div class="reveal mt-12 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl">
+
+                    <div class="relative min-h-[430px] bg-[#002552]">
+
+                        <!-- mapa estilizado -->
+                        <div class="absolute inset-0 opacity-10">
+                            <svg class="h-full w-full" viewBox="0 0 1200 600" preserveAspectRatio="none">
+                                <path d="M0 100L150 60L270 140L380 80L510 150L670 70L800 120L930 50L1200 120V600H0Z"
+                                    fill="white" />
+                                <path d="M70 450L200 370L320 420L450 300L590 360L710 260L870 350L1020 280L1170 380"
+                                    fill="none" stroke="white" stroke-width="3" />
+                            </svg>
+                        </div>
+
+                        <div class="relative flex min-h-[430px] items-center justify-center p-8">
+
+                            <div class="grid w-full max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+                                <div
+                                    class="rounded-2xl border border-white/10 bg-white/10 p-6 text-center backdrop-blur-md transition hover:-translate-y-2 hover:bg-white/15">
+                                    <div
+                                        class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#002552]">
+                                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                d="M12 21s7-5.4 7-11a7 7 0 10-14 0c0 5.6 7 11 7 11Z" />
+                                            <circle cx="12" cy="10" r="2.2" />
+                                        </svg>
+                                    </div>
+
+                                    <h3 class="mt-4 text-lg font-800 text-white">
+                                        Jundiaí
+                                    </h3>
+                                </div>
+
+                                <div
+                                    class="rounded-2xl border border-white/10 bg-white/10 p-6 text-center backdrop-blur-md transition hover:-translate-y-2 hover:bg-white/15">
+                                    <div
+                                        class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#002552]">
+                                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                d="M12 21s7-5.4 7-11a7 7 0 10-14 0c0 5.6 7 11 7 11Z" />
+                                            <circle cx="12" cy="10" r="2.2" />
+                                        </svg>
+                                    </div>
+
+                                    <h3 class="mt-4 text-lg font-800 text-white">
+                                        Campinas
+                                    </h3>
+                                </div>
+
+                                <div
+                                    class="rounded-2xl border border-white/10 bg-white/10 p-6 text-center backdrop-blur-md transition hover:-translate-y-2 hover:bg-white/15">
+                                    <div
+                                        class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#002552]">
+                                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                d="M12 21s7-5.4 7-11a7 7 0 10-14 0c0 5.6 7 11 7 11Z" />
+                                            <circle cx="12" cy="10" r="2.2" />
+                                        </svg>
+                                    </div>
+
+                                    <h3 class="mt-4 text-lg font-800 text-white">
+                                        Sorocaba
+                                    </h3>
+                                </div>
+
+                                <div
+                                    class="rounded-2xl border border-white/10 bg-white/10 p-6 text-center backdrop-blur-md transition hover:-translate-y-2 hover:bg-white/15">
+                                    <div
+                                        class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#002552]">
+                                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                d="M12 21s7-5.4 7-11a7 7 0 10-14 0c0 5.6 7 11 7 11Z" />
+                                            <circle cx="12" cy="10" r="2.2" />
+                                        </svg>
+                                    </div>
+
+                                    <h3 class="mt-4 text-lg font-800 text-white">
+                                        Grande São Paulo
+                                    </h3>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CTA CONTATO -->
+        <section id="contato" class="bg-white py-20 lg:py-28">
+            <div class="mx-auto max-w-7xl px-5 lg:px-8">
+
+                <div class="grid gap-12 lg:grid-cols-[1fr_.85fr]">
+
+                    <div class="reveal">
+
+                        <span class="text-xs font-800 uppercase tracking-[0.2em] text-[#002552]">
+                            Atendimento
+                        </span>
+
+                        <h2 class="mt-3 text-3xl font-900 text-slate-900 sm:text-4xl">
+                            Entre em contato
+                        </h2>
+
+                        <p class="mt-5 max-w-xl text-base leading-8 text-slate-600">
+                            Converse diretamente para entender a necessidade da sua empresa
+                            e avaliar o melhor suporte técnico.
+                        </p>
+
+
+                        <div class="mt-9 space-y-4">
+
+                            <!-- Telefone -->
+                            <a href="tel:+5519999800302"
+                                class="group flex items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-1 hover:border-[#002552]/20 hover:bg-white hover:shadow-lg">
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#002552]/10 text-[#002552] transition group-hover:bg-[#002552] group-hover:text-white">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M3 5a2 2 0 012-2h2l2 5-2 1a16 16 0 007 7l1-2 5 2v2a2 2 0 01-2 2C10.82 20 4 13.18 4 5V5a2 2 0 01-1-2Z" />
+                                    </svg>
+                                </div>
+
+                                <div>
+                                    <p class="text-xs font-700 uppercase tracking-wider text-slate-500">
+                                        Telefone
+                                    </p>
+
+                                    <p class="mt-1 text-base font-800 text-slate-900">
+                                        (19) 99980-0302
+                                    </p>
+                                </div>
+                            </a>
+
+
+                            <!-- E-mail -->
+                            <a href="mailto:willian.catarucci@gmail.com"
+                                class="group flex items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-1 hover:border-[#002552]/20 hover:bg-white hover:shadow-lg">
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#002552]/10 text-[#002552] transition group-hover:bg-[#002552] group-hover:text-white">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M4 6h16v12H4V6Zm0 0l8 6 8-6" />
+                                    </svg>
+                                </div>
+
+                                <div class="min-w-0">
+                                    <p class="text-xs font-700 uppercase tracking-wider text-slate-500">
+                                        E-mail
+                                    </p>
+
+                                    <p class="mt-1 break-all text-base font-800 text-slate-900">
+                                        willian.catarucci@gmail.com
+                                    </p>
+                                </div>
+                            </a>
+
+
+                            <!-- Localização -->
+                            <div class="flex items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#002552]/10 text-[#002552]">
+                                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M12 21s7-5.4 7-11a7 7 0 10-14 0c0 5.6 7 11 7 11Z" />
+                                        <circle cx="12" cy="10" r="2.2" />
+                                    </svg>
+                                </div>
+
+                                <div>
+                                    <p class="text-xs font-700 uppercase tracking-wider text-slate-500">
+                                        Localização
+                                    </p>
+
+                                    <p class="mt-1 text-base font-800 text-slate-900">
+                                        Jundiaí/SP
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- WhatsApp CTA -->
+                    <div class="reveal">
+
+                        <div class="h-full overflow-hidden rounded-3xl bg-slate-950 p-8 shadow-2xl sm:p-10">
+
+                            <div class="mb-8">
+                                <span
+                                    class="inline-flex items-center gap-2 rounded-full bg-green-500/10 px-3 py-2 text-xs font-800 uppercase tracking-wider text-green-400">
+                                    Atendimento direto
+                                </span>
+
+                                <h3 class="mt-6 text-3xl font-900 text-white">
+                                    Fale comigo pelo WhatsApp!
+                                </h3>
+
+                                <p class="mt-4 text-base leading-7 text-slate-300">
+                                    Entre em contato de forma rápida para conversar sobre
+                                    inspeções, responsabilidade técnica, laudos, ART e outros serviços.
+                                </p>
+                            </div>
+
+                            <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+
+                                <p class="text-xs font-700 uppercase tracking-[0.16em] text-slate-400">
+                                    WhatsApp
+                                </p>
+
+                                <p class="mt-2 text-2xl font-900 text-white">
+                                    (19) 99980-0302
+                                </p>
+
+                            </div>
+
+                            <a href="https://wa.me/5519999800302?text=Ol%C3%A1%20Willian,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20de%20engenharia."
+                                target="_blank" rel="noopener noreferrer"
+                                class="mt-6 flex w-full items-center justify-center gap-3 rounded-xl bg-green-500 px-6 py-4 text-sm font-800 text-white transition duration-300 hover:-translate-y-1 hover:bg-green-400 focus:outline-none focus:ring-4 focus:ring-green-500/30">
+                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20.5 3.5A11.9 11.9 0 0012.04 0C5.46 0 .11 5.35.11 11.94c0 2.1.55 4.15 1.6 5.96L0 24l6.25-1.64a11.93 11.93 0 005.78 1.47h.01c6.58 0 11.93-5.35 11.93-11.94A11.9 11.9 0 0020.5 3.5Zm-8.46 18.28h-.01a9.85 9.85 0 01-5.02-1.37l-.36-.21-3.71.97.99-3.61-.23-.37a9.84 9.84 0 01-1.51-5.25C2.19 6.47 6.61 2.05 12.05 2.05a9.83 9.83 0 016.99 2.9 9.84 9.84 0 012.89 6.99c0 5.45-4.42 9.86-9.89 9.86Zm5.41-7.39c-.3-.15-1.79-.88-2.07-.98-.28-.1-.48-.15-.69.15-.2.3-.79.98-.97 1.18-.18.2-.36.23-.66.08-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.36.45-.54.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.69-1.66-.94-2.27-.25-.6-.5-.52-.69-.53h-.59c-.2 0-.53.08-.81.38-.28.3-1.06 1.04-1.06 2.54s1.09 2.95 1.24 3.15c.15.2 2.14 3.27 5.19 4.59.73.32 1.29.51 1.73.66.73.23 1.39.2 1.92.12.59-.09 1.79-.73 2.04-1.43.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.59-.35Z" />
+                                </svg>
+                                Chamar no WhatsApp
+                            </a>
+
+                            <p class="mt-5 text-center text-xs leading-5 text-slate-500">
+                                Resposta e atendimento conforme disponibilidade.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 bg-slate-950 text-white">
+
+        <div class="mx-auto max-w-7xl px-5 py-14 lg:px-8">
+
+            <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.1fr_.8fr_.8fr]">
+
+                <div>
+                    <p class="text-lg font-900">
+                        Willian Berto Catarucci
+                    </p>
+
+                    <p class="mt-1 text-sm font-600 text-slate-400">
+                        Engenheiro Mecânico
+                    </p>
+
+                    <div class="mt-4 inline-flex rounded-lg border border-white/10 bg-white/5 px-3 py-2">
+                        <span class="text-xs font-700 text-slate-300">
+                            CREA-SP 5069161584
+                        </span>
+                    </div>
+
+                    <p class="mt-6 max-w-md text-sm leading-6 text-slate-400">
+                        Segurança, conformidade e confiabilidade para seus equipamentos.
+                    </p>
+                </div>
+
+
+                <div>
+                    <p class="text-xs font-800 uppercase tracking-[0.2em] text-blue-200">
+                        Contato
+                    </p>
+
+                    <div class="mt-5 space-y-3 text-sm text-slate-400">
+
+                        <a href="tel:+5519999800302" class="block transition hover:text-white">
+                            (19) 99980-0302
+                        </a>
+
+                        <a href="mailto:willian.catarucci@gmail.com"
+                            class="block break-all transition hover:text-white">
+                            willian.catarucci@gmail.com
+                        </a>
+
+                        <span class="block">
+                            Jundiaí/SP
+                        </span>
+
+                    </div>
+                </div>
+
+
+                <div>
+                    <p class="text-xs font-800 uppercase tracking-[0.2em] text-blue-200">
+                        Área de atendimento
+                    </p>
+
+                    <p class="mt-5 text-sm leading-7 text-slate-400">
+                        Jundiaí, Campinas, Sorocaba e Grande São Paulo.
+                    </p>
+
+                    <a href="#contato"
+                        class="mt-5 inline-flex items-center gap-2 text-sm font-800 text-white transition hover:text-blue-200">
+                        Solicitar atendimento
+                        <span>→</span>
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div
+                class="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+
+                <p>
+                    © <span id="year"></span> Willian Berto Catarucci. Todos os direitos reservados.
+                </p>
+
+                <p>
+                    Engenharia Mecânica • Responsabilidade Técnica
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- WHATSAPP FIXO MOBILE/DESKTOP -->
+    <a href="https://wa.me/5519999800302?text=Ol%C3%A1%20Willian,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os."
+        target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp"
+        class="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-2xl transition duration-300 hover:scale-110 hover:bg-green-400 focus:outline-none focus:ring-4 focus:ring-green-500/30">
+        <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M20.5 3.5A11.9 11.9 0 0012.04 0C5.46 0 .11 5.35.11 11.94c0 2.1.55 4.15 1.6 5.96L0 24l6.25-1.64a11.93 11.93 0 005.78 1.47h.01c6.58 0 11.93-5.35 11.93-11.94A11.9 11.9 0 0020.5 3.5Zm-8.46 18.28h-.01a9.85 9.85 0 01-5.02-1.37l-.36-.21-3.71.97.99-3.61-.23-.37a9.84 9.84 0 01-1.51-5.25C2.19 6.47 6.61 2.05 12.05 2.05a9.83 9.83 0 016.99 2.9 9.84 9.84 0 012.89 6.99c0 5.45-4.42 9.86-9.89 9.86Zm5.41-7.39c-.3-.15-1.79-.88-2.07-.98-.28-.1-.48-.15-.69.15-.2.3-.79.98-.97 1.18-.18.2-.36.23-.66.08-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.36.45-.54.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.69-1.66-.94-2.27-.25-.6-.5-.52-.69-.53h-.59c-.2 0-.53.08-.81.38-.28.3-1.06 1.04-1.06 2.54s1.09 2.95 1.24 3.15c.15.2 2.14 3.27 5.19 4.59.73.32 1.29.51 1.73.66.73.23 1.39.2 1.92.12.59-.09 1.79-.73 2.04-1.43.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.59-.35Z" />
+        </svg>
+    </a>
+
+
+    <script>
+        // Ano do footer
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Menu mobile
+        const menuButton = document.getElementById("menuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuButton.addEventListener("click", () => {
+            const isOpen = !mobileMenu.classList.contains("hidden");
+
+            mobileMenu.classList.toggle("hidden");
+            menuButton.setAttribute("aria-expanded", String(!isOpen));
+        });
+
+        // Fecha menu ao clicar em um link
+        document.querySelectorAll("#mobileMenu a").forEach((link) => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+                menuButton.setAttribute("aria-expanded", "false");
+            });
+        });
+
+        // Animações de entrada
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+        document.querySelectorAll(".reveal").forEach((element) => {
+            observer.observe(element);
+        });
+
+        const heroImage = document.getElementById("heroImage");
+        const heroFallback = document.getElementById("heroFallback");
+
+        heroImage.addEventListener("error", () => {
+            heroImage.classList.add("hidden");
+            heroFallback.classList.remove("hidden");
+            heroFallback.classList.add("flex");
+        });
+    </script>
+
+</body>
+
+</html>
